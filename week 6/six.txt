@@ -1,0 +1,9 @@
+Owner(ownId, ownName, ownPhone)  primary key - ownId
+
+
+Property( propId, bidgName, unitNo, bdrms) primary key - propId
+
+
+Shares (ownId, propId, startWeek, endWeek) primary key - (ownId, propId)
+foreign key ownId references Owner
+foreign key propId references propId

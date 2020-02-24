@@ -1,0 +1,3 @@
+Account (accId, decAccId , accName, balance) primary key - (accId, decAccId)
+foreign key decAccId references accId
+

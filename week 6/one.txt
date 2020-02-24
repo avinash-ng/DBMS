@@ -1,0 +1,14 @@
+Student(studNo, stdName, stdAddress, stdCity, stdCity, stdState, stdZip, stdEmail)   studNo - primary key
+
+Institution(instId, instName, instMascot)  instId - primary key
+
+Lender(lenderNo, lenderName) lenderNo - primary key
+
+Loan(loanNo, procDate, disbMethod, disbBank, dateAuth, noteValue, subsidized, rate)  loanNo - primary key
+
+
+DisburseLine(dateSent, amount, origFee, guarFee)  dateSent - primary key
+
+
+RULE :
+    EACH ENTITY TYPE BECOMES A TABLE

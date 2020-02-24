@@ -1,0 +1,25 @@
+Student(studNo, stdName, stdAddress, stdCity, stdCity, stdState, stdZip, stdEmail)   studNo - primary key
+
+Institution(instId, instName, instMascot)  instId - primary key
+
+Lender(lenderNo, lenderName) lenderNo - primary key
+
+Loan(loanNo, studNo, instId, lenderNo, procDate, disbMethod, disbBank, dateAuth, noteValue, subsidized, rate)  loanNo - primary key
+foreign key(studNo) references Student(studNo)
+foreign key(instId) references Institution(instId)
+foreign key(lenderNo) references Lender(lenderNo)
+
+
+DisburseLine(dateSent, loanNo, amount, origFee, guarFee)  (loanNo, dateSent) - primary key
+foreign key(loanNo) references Loan(loanNo)
+
+
+
+
+
+
+RULES   :
+    1. ALL ENTITY TYPES CONVERTED TO TABLES
+    2. SHOWN 1-M RELATION SHIP AMONG TABLES
+    3. THERE ARE NO M-N RELATIONSHIPS AMONG TABLES
+    4. HERE IN DisburseLine the loanNo also be a component of primary key along with dateSent. 
